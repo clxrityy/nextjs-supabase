@@ -2,26 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  font-family: var(--font-geist-sans), sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
+html, body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  height: screen;
+  width: screen;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .mono {
+    font-family: var(--font-geist-mono), monospace;
+  }
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
   }
 }
