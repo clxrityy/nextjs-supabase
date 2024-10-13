@@ -1,6 +1,7 @@
 import Click from "@/components/elements/Click";
 import { Button } from "@/components/ui/button";
 import { ICONS } from "@/config";
+import Link from "next/link";
 import { Suspense } from "react";
 
 export const revalidate = 0;
@@ -21,8 +22,10 @@ export default async function Home() {
             </p>
           </div>
           <Button className="gap-2 font-semibold">
-            <ICONS.github size={20} className="text-white" />
-            View on GitHub
+            <Link href={"https://github.com/clxrityy/nextjs-supabase"}>
+              <ICONS.github size={20} className="text-white" />
+              View on GitHub
+            </Link>
           </Button>
         </div>
         <Suspense fallback={<ICONS.loading size={50} className="animate-spin text-blue-500" />}>
