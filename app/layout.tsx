@@ -24,7 +24,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Nextjs + Supabase Template",
-  description: "",
+  description: "Next.js & Supabase realtime updates & authentication template",
 };
 
 export default async function RootLayout({
